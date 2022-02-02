@@ -1,0 +1,386 @@
+/* Global Styling */
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 10vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+li,
+button,
+input,
+label,
+p {
+  font-size: 2rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button {
+  padding: 2rem 5rem;
+  background: #08305e;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+  /* animation: cloudAnimation 2s infinite alternate; */
+}
+
+button:hover {
+  background: #4c6e97;
+  color: #000000;
+}
+
+/* Nav Styling */
+
+.main-head {
+  background-color: #131c27;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+}
+
+/* Hero styling */
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: "Pattaya", sans-serif;
+}
+
+.hero h3 {
+  padding: 3rem;
+}
+
+/* locations sections */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/new-york-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  /* flex-direction: column;
+  justify-content: center; */
+  align-items: center;
+  /* text-align: center; */
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+
+.locations-head h3 {
+  padding: 3rem 0rem;
+  background: linear-gradient(rgb(128, 115, 45), rgb(149, 226, 71));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+  position: absolute;
+  -webkit-user-drag: none;
+  top: 0%;
+  right: 0%;
+}
+
+.moving-cloud-1 {
+  animation: cloudMove 3s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 5%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudMove 4.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  0% {
+    background: #342781;
+    font-size: 3rem;
+  }
+  25% {
+    background: #598034;
+    font-size: 3rem;
+  }
+  50% {
+    background: #922139;
+    color: crimson;
+    font-size: 5rem;
+    border-radius: 5rem;
+  }
+  75% {
+    background: #873093;
+    font-size: 3rem;
+  }
+  100% {
+    background: #984222;
+    font-size: 3rem;
+  }
+}
+
+@keyframes cloudMove {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Benefits section */
+
+.benefits-head {
+  background: #343c44;
+  padding: 3rem;
+  min-height: 30vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benefits-head h3 {
+  padding: 1rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  align-items: center;
+}
+
+.card {
+  /* background: crimson; */
+  text-align: center;
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+
+.card h4,
+.card p {
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.card-icon {
+  background: #343c44;
+}
+
+/* Contacts section */
+
+#contact {
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/contact-mountain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  width: 60%;
+  /* margin: auto; */
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.form-head {
+  text-align: center;
+  padding: 2rem;
+}
+
+.name-form,
+.email-form,
+.text-form {
+  padding: 1rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 4rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 6rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+  padding: 1rem 2.2rem;
+}
+
+/* Footer styling */
+/* 
+footer {
+  color: #ffffff;
+  background: rgba(19, 28, 39, 1);
+} */
+
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper h5 {
+  flex: 1 1 20rem;
+  font-family: "Pattaya", sans-serif;
+}
+
+.footer-wrapper ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 20rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:focus {
+  background: #031f41;
+  outline-style: solid;
+}
+
+/* Media Query */
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+  }
+
+  .cloud {
+    height: 20rem;
+    pointer-events: none;
+  }
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-2 {
+    z-index: -2;
+  }
+  .locations-head h3 {
+    background: rgba(19, 28, 39, 0.5);
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .form-wrapper {
+    width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer h5 {
+    padding-bottom: 3rem;
+  }
+}
